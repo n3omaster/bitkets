@@ -46,6 +46,7 @@ class EventController extends Controller
     public function show(Event $event)
     {
         // Some SEO
+        
 
         return view('events.show', compact('event'));
     }
