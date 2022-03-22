@@ -15,6 +15,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+
+            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            
             $table->text('two_factor_secret')
                     ->after('password')
                     ->nullable();

@@ -14,6 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('sessions', function (Blueprint $table) {
+
+            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('ip_address', 45)->nullable();

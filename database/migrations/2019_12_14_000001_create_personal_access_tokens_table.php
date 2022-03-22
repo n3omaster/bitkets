@@ -14,6 +14,9 @@ class CreatePersonalAccessTokensTable extends Migration
     public function up()
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
+
+            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            
             $table->bigIncrements('id');
             $table->morphs('tokenable');
             $table->string('name');

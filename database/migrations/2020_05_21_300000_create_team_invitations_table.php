@@ -14,6 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('team_invitations', function (Blueprint $table) {
+
+            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            
             $table->id();
             $table->foreignId('team_id')->constrained()->cascadeOnDelete();
             $table->string('email');

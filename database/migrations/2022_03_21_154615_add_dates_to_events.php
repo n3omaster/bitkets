@@ -14,6 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
+
+            \Illuminate\Support\Facades\DB::statement('SET SESSION sql_require_primary_key=0');
+            
             $table->date('start')->nullable();
             $table->date('end')->nullable();
         });
