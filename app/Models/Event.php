@@ -13,6 +13,12 @@ class Event extends Model
     // Pricing (Could Be many diferente price tickets types)
     // Media (Can have multiple meda files, the first one must be the principal)
 
+    // Detectable by its slug
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     /**
      * Event Owner
      * @return \App\Models\User

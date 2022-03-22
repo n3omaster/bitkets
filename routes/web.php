@@ -19,7 +19,7 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // View Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
-Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');
+Route::get('/{event}', [EventController::class, 'show'])->name('events.show');
 
 // Show Event
 
