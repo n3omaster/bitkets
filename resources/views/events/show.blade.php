@@ -1,6 +1,6 @@
 <x-guest-layout>
     <!-- ==== Breadcrumb Section Start ==== -->
-    <section class="ud-pt-[150px] ud-pb-24">
+    <section class="ud-pt-[150px]">
         <div class="ud-container">
             <div class="ud-rounded-lg ud-border-2 ud-border-stroke ud-bg-bg-color ud-py-5 ud-px-8">
                 <ul class="ud-flex ud-items-center">
@@ -211,7 +211,7 @@
                         </div>
 
                         <button class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">
-                            Place Bid
+                            Comprar Tickets
                         </button>
                     </div>
                 </div>
