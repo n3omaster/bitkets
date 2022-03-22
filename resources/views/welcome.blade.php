@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <!-- ==== Hero Section Start ==== -->
     <section id="home" class="ud-relative ud-z-10 ud-overflow-hidden ud-bg-cover ud-bg-top ud-bg-no-repeat ud-pt-[150px] ud-pb-24" style="background-image: url('./images/hero/common-bg.jpg')">
         <div class="ud-absolute ud-left-0 ud-top-0 ud--z-10 ud-h-full ud-w-full" style="background: linear-gradient(180deg,rgba(20, 20, 32, 0.65) 0%,#141420 100%);"></div>
@@ -916,7 +916,7 @@
         </div>
     </section>
     <!-- ==== Collection Section End ==== -->
-</x-guest-layout>
+</x-app-layout>
 
 @push('scripts')
 <script src="{{ asset('js/tiny-slider.js') }}"></script>
