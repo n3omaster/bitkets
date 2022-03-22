@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <!-- ==== Breadcrumb Section Start ==== -->
     <section class="ud-pt-[150px]">
         <div class="ud-container">
@@ -219,4 +219,4 @@
         </div>
     </section>
     <!-- ==== Today's Picks Section End ==== -->
-</x-guest-layout>
+</x-app-layout>
