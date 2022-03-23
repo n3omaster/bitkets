@@ -45,7 +45,7 @@
 
             <div class="ud-relative">
                 <div class="artists-slider ud--mx-4 ud-flex ud-flex-wrap">
-
+                    @forelse ($brands as $brand)
                     <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
                         <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
                             <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
@@ -63,43 +63,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
-                        <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
-                            <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
-                                <div class="ud-mr-5 ud-h-[70px] ud-w-full ud-max-w-[70px] ud-overflow-hidden ud-rounded-lg">
-                                    <img src="images/artists/image-02.png" alt="artists" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                </div>
-                                <div class="ud-w-full">
-                                    <h3 class="ud-truncate ud-text-lg ud-font-semibold ud-text-white">
-                                        @Elon_Mask
-                                    </h3>
-                                    <span class="ud-text-base ud-font-semibold ud-text-secondary">
-                                        12.25 ETH
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
-                        <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
-                            <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
-                                <div class="ud-mr-5 ud-h-[70px] ud-w-full ud-max-w-[70px] ud-overflow-hidden ud-rounded-lg">
-                                    <img src="images/artists/image-03.png" alt="artists" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                </div>
-                                <div class="ud-w-full">
-                                    <h3 class="ud-truncate ud-text-lg ud-font-semibold ud-text-white">
-                                        @Hiliya_Farah
-                                    </h3>
-                                    <span class="ud-text-base ud-font-semibold ud-text-secondary">
-                                        9.89 ETH
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @empty
+                    @endforelse
                 </div>
             </div>
         </div>

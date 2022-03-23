@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brands;
 use App\Models\Event;
 use App\Models\Media;
 use Carbon\Carbon;
@@ -18,6 +19,8 @@ class WelcomeController extends Controller
         $media1 = Media::with('event')->latest()->take(5)->get();
         $media2 = Media::with('event')->inRandomOrder()->take(5)->get();
 
-        return view('welcome', compact('events', 'today_events', 'media1', 'media2'));
+        $brands = Brands::take(4)->inRandomOrder()->get();
+
+        return view('welcome', compact('events', 'today_events', 'media1', 'media2', 'brands'));
     }
 }
