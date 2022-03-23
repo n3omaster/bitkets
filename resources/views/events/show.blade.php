@@ -30,8 +30,8 @@
         <div class="ud-container">
             <div class="ud--mx-4 ud-flex ud-flex-wrap">
                 <div class="ud-w-full ud-px-4 lg:ud-w-1/2">
-                    <div class="ud-mb-12 ud-flex ud-w-full ud-items-center ud-justify-center ud-rounded-xl ud-border ud-border-stroke ud-bg-bg-color ud-py-8 sm:ud-py-14 md:ud-py-24 lg:ud-mb-0 lg:ud-py-16 xl:ud-py-28">
-                        {{ Storage::disk(config('filesystems.disk'))->url($event->media[0]->image) }}
+                    <div class="ud-mb-12 ud-flex ud-w-full ud-items-center ud-justify-center ud-rounded-xl ud-border ud-border-stroke ud-bg-bg-color">
+                        <img class="ud-rounded-xl" src="{{ Storage::disk(config('filesystems.disk'))->url($event->media[0]->image) }}" alt="{{ $event->media[0]->name }}" />
                     </div>
                 </div>
 
@@ -149,10 +149,10 @@
                                     </div>
                                     <div class="ud-text-right">
                                         <h5 class="ud-text-sm ud-font-semibold ud-text-white">
-                                            4.75 ETH
+                                            {{ $buyer->owner->name }}
 
                                             <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                = $12.246
+                                                $ {{ $buyer->ticket->price }}
                                             </span>
                                         </h5>
                                     </div>

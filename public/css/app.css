@@ -461,10 +461,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }.ud-right-\[6px\]{
   right: 6px;
-}.ud-left-4{
-  left: 1rem;
-}.ud-top-28{
-  top: 7rem;
 }.ud-top-4{
   top: 1rem;
 }.ud-z-50{
@@ -561,8 +557,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 250px;
 }.ud-w-9{
   width: 2.25rem;
-}.ud-w-\[1\.1px\]{
-  width: 1.1px;
 }.ud-w-\[72px\]{
   width: 72px;
 }.ud-w-2\/3{
@@ -615,8 +609,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }.ud-justify-between{
   justify-content: space-between;
-}.ud-justify-around{
-  justify-content: space-around;
 }.ud-space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -649,8 +641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }.ud-border-t{
   border-top-width: 1px;
-}.ud-border-t-2{
-  border-top-width: 2px;
 }.ud-border-stroke{
   --tw-border-opacity: 1;
   border-color: rgb(77 76 90 / var(--tw-border-opacity));
@@ -698,13 +688,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.1;
 }.ud-bg-opacity-70{
   --tw-bg-opacity: 0.7;
-}.ud-bg-gradient-to-b{
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}.ud-from-white{
-  --tw-gradient-from: #fff;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
-}.ud-to-transparent{
-  --tw-gradient-to: transparent;
 }.ud-bg-cover{
   background-size: cover;
 }.ud-bg-top{
@@ -823,8 +806,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1.25rem;
 }.ud-pt-12{
   padding-top: 3rem;
-}.ud-pr-1{
-  padding-right: 0.25rem;
 }.ud-pt-\[90px\]{
   padding-top: 90px;
 }.ud-pb-\[60px\]{
@@ -888,8 +869,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(54 179 126 / var(--tw-text-opacity));
 }.ud-opacity-0{
   opacity: 0;
-}.ud-opacity-20{
-  opacity: 0.2;
 }.ud-shadow-sticky{
   --tw-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: inset 0 -1px 0 0 var(--tw-shadow-color);
@@ -1343,9 +1322,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }.sm\:ud-py-14{
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-  }.sm\:ud-px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }.sm\:ud-pr-8{
     padding-right: 2rem;
   }.sm\:ud-pb-0{
