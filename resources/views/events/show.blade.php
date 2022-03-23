@@ -31,7 +31,7 @@
             <div class="ud--mx-4 ud-flex ud-flex-wrap">
                 <div class="ud-w-full ud-px-4 lg:ud-w-1/2">
                     <div class="ud-mb-12 ud-flex ud-w-full ud-items-center ud-justify-center ud-rounded-xl ud-border ud-border-stroke ud-bg-bg-color ud-py-8 sm:ud-py-14 md:ud-py-24 lg:ud-mb-0 lg:ud-py-16 xl:ud-py-28">
-                        <img src="images/item-details/image-01.png" alt="details image" />
+                        {{ Storage::disk(config('filesystems.disk'))->url($event->media[0]->image) }}
                     </div>
                 </div>
 

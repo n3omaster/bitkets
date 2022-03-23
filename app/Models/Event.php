@@ -43,6 +43,11 @@ class Event extends Model
      */
     public function media()
     {
-        return $this->hasMany(Media::class);
+        return $this->hasMany(Media::class)
+            ->withDefault([
+                'name' => config('app.name'),
+                'image' => 'events/Bitcoin-por-la-Libreta.png',
+                'event_id' => 1
+            ]);
     }
 }
