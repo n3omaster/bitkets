@@ -50,7 +50,7 @@ module.exports = {
                 sticky: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
             },
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
             },
         },
     },

@@ -85,22 +85,22 @@
                             <div class="ud-w-full sm:ud-w-1/2">
                                 <div class="ud-space-y-2 ud-border-stroke ud-p-6 sm:ud-border-r">
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Lugar: <span class="ud-text-white"> Devid Methio </span>
+                                        Lugar: <span class="ud-text-white">{{ $event->place }}</span>
                                     </p>
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Tickets: <span class="ud-text-white"> 4000x4000 </span>
+                                        Tickets: <span class="ud-text-white"></span>
                                     </p>
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Created On:
-                                        <span class="ud-text-white"> 04 April , 2021 </span>
+                                        Fecha:
+                                        <span class="ud-text-white">{{ $event->start }}</span>
                                     </p>
                                 </div>
                             </div>
                             <div class="ud-w-full sm:ud-w-1/2 sm:ud-text-center">
                                 <div class="ud-space-y-3 ud-p-6">
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Current Bid :
-                                        <span class="ud-text-white">$ {{ $event-> }}</span>
+                                        Tickets:
+                                        <span class="ud-text-white">$ {{ $event->price[0]->price }}</span>
                                     </p>
                                     <p class="ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-white ud-bg-opacity-10 ud-py-[10px] ud-px-8 ud-text-base ud-font-semibold ud-text-white">
                                         05 : 15 : 07 : 45
@@ -118,42 +118,12 @@
                                 </div>
                                 <div class="ud-px-[6px] ud-pt-3">
                                     <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
-                                        Bids
-                                    </button>
-                                </div>
-                                <div class="ud-px-[6px] ud-pt-3">
-                                    <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
                                         Details
                                     </button>
                                 </div>
                             </div>
 
                             <div class="ud-py-2">
-                                <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
-                                    <div class="ud-flex ud-items-center">
-                                        <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">
-                                            <img src="images/picks/creator-01.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                        </div>
-                                        <div class="ud-w-full">
-                                            <h4 class="ud-text-sm ud-font-semibold ud-text-white">
-                                                @Devid_Mill...
-
-                                                <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                    5 Hours ago
-                                                </span>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="ud-text-right">
-                                        <h5 class="ud-text-sm ud-font-semibold ud-text-white">
-                                            4.75 ETH
-
-                                            <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                = $12.246
-                                            </span>
-                                        </h5>
-                                    </div>
-                                </div>
                                 <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                                     <div class="ud-flex ud-items-center">
                                         <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">

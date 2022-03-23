@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\Brands;
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class BrandsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
+        //
     }
 
     /**
@@ -40,23 +41,21 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Brands $brands)
     {
-        
-
-        return view('events.show', compact('event'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(Brands $brands)
     {
         //
     }
@@ -65,10 +64,10 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Brands $brands)
     {
         //
     }
@@ -76,10 +75,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Brands $brands)
     {
         //
     }

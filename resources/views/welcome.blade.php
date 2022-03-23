@@ -7,17 +7,14 @@
                 <div class="ud-w-full ud-px-4 lg:ud-w-1/2">
                     <div class="ud-mb-12 ud-max-w-[570px] lg:ud-mb-0">
                         <h1 class="ud-mb-4 ud-text-[40px] ud-font-bold ud-leading-tight ud-text-white md:ud-text-[50px] lg:ud-text-[40px] xl:ud-text-[46px] 2xl:ud-text-[50px] sm:text-[46px]">
-                            Tailwind Template for NFT Marketplace and Web3 Platforms
+                            Tickets a eventos con Bitcoin
                         </h1>
                         <p class="ud-mb-8 ud-text-lg ud-font-medium ud-leading-relaxed ud-text-body-color md:ud-pr-14">
-                            Template for NFT, Token, and Web3 marketplace projects, based on Tailwind CSS. Comes with all the essential UI components and pages you need to build an NFT marketplace or all sorts of Web3 platforms.
+                            Crea y comercializa las entradas a tu evento con Lightning ⚡️ y expande la asistencia a tu fiesta o encuentro sin límites.
                         </p>
                         <div class="flex flex-wrap items-center">
-                            <a href="explore-items.html" class="ud-mr-5 ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-border-2 ud-border-primary ud-bg-primary ud-py-3 ud-px-7 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
-                                Explore now
-                            </a>
-                            <a href="create-item.html" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-border-2 ud-border-white ud-py-3 ud-px-7 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-border-primary hover:ud-bg-primary">
-                                Upload Your Art
+                            <a href="{{ route('events.index') }}" class="ud-mr-5 ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-border-2 ud-border-primary ud-bg-primary ud-py-3 ud-px-7 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
+                                Ver eventos
                             </a>
                         </div>
                     </div>
@@ -30,71 +27,6 @@
                 </div>
             </div>
         </div>
-
-        <div>
-            <span class="ud-absolute ud-left-4 ud-top-28 ud--z-10">
-                <svg width="111" height="115" viewBox="0 0 111 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_f_21_53)">
-                        <g filter="url(#filter1_i_21_53)">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M73.287 91.7144C92.1417 80.8286 98.5953 56.729 87.7122 37.8789C76.8291 19.0288 52.7314 12.568 33.8767 23.4537C15.0312 34.3342 8.56843 58.4391 19.4515 77.2892C30.3346 96.1393 54.4415 102.595 73.287 91.7144Z" fill="url(#paint0_linear_21_53)" />
-                        </g>
-                        <path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd" d="M69.4961 86.3067C86.2379 76.6408 91.9683 55.2418 82.3048 38.5041C72.6412 21.7663 51.244 16.0295 34.5021 25.6954C17.7685 35.3566 12.0299 56.7603 21.6934 73.498C31.357 90.2358 52.7625 95.9679 69.4961 86.3067Z" fill="url(#paint1_radial_21_53)" />
-                    </g>
-                    <defs>
-                        <filter id="filter0_f_21_53" x="-3.83423" y="0.165771" width="114.834" height="114.834" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="9" result="effect1_foregroundBlur_21_53" />
-                        </filter>
-                        <filter id="filter1_i_21_53" x="14.1658" y="10.1658" width="86.8342" height="86.8342" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                            <feOffset dx="8" dy="-8" />
-                            <feGaussianBlur stdDeviation="10" />
-                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                            <feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.168627 0 0 0 0 0.321569 0 0 0 0.25 0" />
-                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_21_53" />
-                        </filter>
-                        <linearGradient id="paint0_linear_21_53" x1="31.6878" y1="19.1263" x2="63.3007" y2="99.1224" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#EBC77A" />
-                            <stop offset="0.541667" stop-color="#CA3F8D" />
-                            <stop offset="1" stop-color="#5142FC" />
-                        </linearGradient>
-                        <radialGradient id="paint1_radial_21_53" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(56.6039 36.9093) rotate(63.4349) scale(29.0091)">
-                            <stop stop-color="white" />
-                            <stop offset="1" stop-color="white" stop-opacity="0" />
-                        </radialGradient>
-                    </defs>
-                </svg>
-            </span>
-            <div class="ud-absolute ud-left-0 ud-top-0 ud--z-10 ud-flex ud-h-full ud-w-full ud-justify-around ud-opacity-20">
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden lg:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden lg:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden lg:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden md:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden md:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent ud-hidden md:ud-flex">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-                <span class="ud-h-full ud-w-[1.1px] ud-bg-gradient-to-b ud-from-white ud-to-transparent">
-                </span>
-            </div>
-        </div>
     </section>
     <!-- ==== Hero Section End ==== -->
 
@@ -105,7 +37,7 @@
                 <div class="ud--mx-4 ud-flex">
                     <div class="ud-w-full ud-px-4">
                         <h2 class="ud-mb-5 ud-text-3xl ud-font-bold ud-text-white">
-                            Top Artists
+                            Top Marcas
                         </h2>
                     </div>
                 </div>
@@ -113,6 +45,7 @@
 
             <div class="ud-relative">
                 <div class="artists-slider ud--mx-4 ud-flex ud-flex-wrap">
+
                     <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
                         <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
                             <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
@@ -130,6 +63,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
                         <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
                             <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
@@ -147,6 +81,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
                         <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
                             <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
@@ -164,23 +99,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
-                        <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
-                            <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
-                                <div class="ud-mr-5 ud-h-[70px] ud-w-full ud-max-w-[70px] ud-overflow-hidden ud-rounded-lg">
-                                    <img src="images/artists/image-04.png" alt="artists" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                </div>
-                                <div class="ud-w-full">
-                                    <h3 class="ud-truncate ud-text-lg ud-font-semibold ud-text-white">
-                                        @Wilium_Dev
-                                    </h3>
-                                    <span class="ud-text-base ud-font-semibold ud-text-secondary">
-                                        2.09 ETH
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -193,10 +112,10 @@
             <div class="ud-mb-12 ud-border-b ud-border-white ud-border-opacity-10">
                 <div class="ud-justify-between sm:ud-flex">
                     <h2 class="ud-mb-4 ud-text-3xl ud-font-bold ud-leading-none ud-text-white">
-                        Live Auctions
+                        Próximos Eventos
                     </h2>
-                    <a href="javascript:void(0)" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-py-[10px] ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
-                        View All
+                    <a href="{{ route('events.index') }}" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-py-[10px] ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
+                        Ver todos
                     </a>
                 </div>
             </div>
@@ -425,10 +344,10 @@
             <div class="ud-mb-12 ud-border-b ud-border-white ud-border-opacity-10">
                 <div class="ud-justify-between sm:ud-flex">
                     <h2 class="ud-mb-4 ud-text-3xl ud-font-bold ud-leading-none ud-text-white">
-                        Today's Picks
+                        Eventos de hoy
                     </h2>
-                    <a href="javascript:void(0)" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-py-[10px] ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
-                        View All
+                    <a href="{{ route('events.index') }}" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-py-[10px] ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
+                        Ver todos
                     </a>
                 </div>
             </div>
@@ -690,14 +609,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="ud-w-full ud-px-4">
-                    <div class="ud-pt-8 ud-text-center">
-                        <a href="javascript:void(0)" class="ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-border-2 ud-border-white ud-py-3 ud-px-7 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-border-primary hover:ud-bg-primary">
-                            Load More...
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -708,11 +619,10 @@
         <div class="ud-container">
             <div class="ud-mx-auto ud-mb-14 ud-max-w-[650px] ud-text-center">
                 <h2 class="ud-mb-4 ud-text-4xl ud-font-bold ud-leading-tight ud-text-white sm:ud-text-[42px]">
-                    Core Features
+                    Prepara tu fiesta con BitKets
                 </h2>
                 <p class="ud-text-lg ud-font-medium ud-text-body-color">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
-                    lacinia dolor, in pretium nunc. Morbi mollis arcu eget.
+                    Crea tu propio evento masivo y ofrece a tus audiencia los cobros con Bitcoin LN ⚡️
                 </p>
             </div>
 
@@ -725,11 +635,11 @@
                             </svg>
                         </div>
                         <h3 class="ud-mb-2 ud-text-xl ud-font-bold ud-text-white ud-transition group-hover:ud-text-black">
-                            Set Up Your Wallet
+                            Configura tu Wallet
                         </h3>
 
                         <p class="ud-text-base ud-font-medium ud-text-body-color">
-                            Lorem ipsum dolor sit amet consectetur smit.
+                            Recibes los cobros con Bitcoin, so, instala Muun.
                         </p>
                     </div>
                 </div>
@@ -741,11 +651,11 @@
                             </svg>
                         </div>
                         <h3 class="ud-mb-2 ud-text-xl ud-font-bold ud-text-white ud-transition group-hover:ud-text-black">
-                            Make Your Collection
+                            Construye tu Evento
                         </h3>
 
                         <p class="ud-text-base ud-font-medium ud-text-body-color">
-                            Lorem ipsum dolor sit amet consectetur smit.
+                            Prepara los detalles de tu evento y vende tickets ya.
                         </p>
                     </div>
                 </div>
@@ -757,11 +667,11 @@
                             </svg>
                         </div>
                         <h3 class="ud-mb-2 ud-text-xl ud-font-bold ud-text-white ud-transition group-hover:ud-text-black">
-                            Add Your NFTs
+                            Agrega los detalles
                         </h3>
 
                         <p class="ud-text-base ud-font-medium ud-text-body-color">
-                            Lorem ipsum dolor sit amet consectetur smit.
+                            Configura las marcas y detalles y participantes.
                         </p>
                     </div>
                 </div>
@@ -773,11 +683,11 @@
                             </svg>
                         </div>
                         <h3 class="ud-mb-2 ud-text-xl ud-font-bold ud-text-white ud-transition group-hover:ud-text-black">
-                            List Them For Sale
+                            Comienza a vender
                         </h3>
 
                         <p class="ud-text-base ud-font-medium ud-text-body-color">
-                            Lorem ipsum dolor sit amet consectetur smit.
+                            Crea la página de tu evento y vende tickets con BitKets.
                         </p>
                     </div>
                 </div>
@@ -792,10 +702,10 @@
             <div class="ud-mb-12 ud-border-b ud-border-white ud-border-opacity-10">
                 <div class="ud-justify-between sm:ud-flex">
                     <h2 class="ud-mb-4 ud-text-3xl ud-font-bold ud-leading-none ud-text-white">
-                        Popular Collection
+                        Últimos eventos
                     </h2>
                     <a href="javascript:void(0)" class="ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-py-[10px] ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
-                        Explore More
+                        Explora las fotos
                     </a>
                 </div>
             </div>
@@ -821,7 +731,7 @@
                         <div class="ud-mb-3 ud-flex ud-items-center ud-justify-between">
                             <h3>
                                 <a href="javascript:void(0)" class="ud-text-lg ud-font-bold ud-text-white sm:ud-text-xl md:ud-text-2xl lg:ud-text-xl xl:ud-text-2xl">
-                                    Creative 3d illustration
+                                    Past event media
                                 </a>
                             </h3>
                             <button class="ud-inline-flex ud-items-center ud-rounded-md ud-bg-white ud-px-2 ud-py-1">
@@ -841,10 +751,9 @@
                             </div>
                             <div class="ud-w-full">
                                 <h4 class="ud-text-base ud-font-semibold ud-text-white">
-                                    @Lathium_Lui...
-
+                                    Brand
                                     <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                        Creator
+                                        Organizador
                                     </span>
                                 </h4>
                             </div>
@@ -902,10 +811,9 @@
                             </div>
                             <div class="ud-w-full">
                                 <h4 class="ud-text-base ud-font-semibold ud-text-white">
-                                    @Andrio_Hev...
-
+                                    Brand
                                     <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                        Creator
+                                    Organizador
                                     </span>
                                 </h4>
                             </div>

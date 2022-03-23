@@ -27,7 +27,11 @@ Route::get('/{event}', [EventController::class, 'show'])->name('events.show');
 
 // View Ticket Status
 
+// Brands Index
+Route::get('/brands', [EventController::class, 'index'])->name('brands.index');
 
+/*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+*/

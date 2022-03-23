@@ -21,8 +21,8 @@
         <div class="ud-container">
             <div class="ud-relative ud-mx-[-16px] ud-flex ud-items-center ud-justify-between">
                 <div class="ud-w-60 ud-max-w-full ud-px-4">
-                    <a href="{{ route('welcome') }}" class="header-logo ud-block ud-w-full" :class="scrolledFromTop ? 'ud-py-4 lg:ud-py-2' : 'ud-py-5 lg:ud-py-7' ">
-                        <img src="images/logo.svg" alt="logo" class="ud-h-10 ud-max-w-full" />
+                    <a href="{{ route('welcome') }}" class="header-logo ud-block ud-w-full ud-font-bold ud-text-3xl ud-text-white" :class="scrolledFromTop ? 'ud-py-4 lg:ud-py-2' : 'ud-py-5 lg:ud-py-7' ">
+                        BitKets
                     </a>
                 </div>
                 <div class="ud-flex ud-w-full ud-items-center ud-justify-between ud-px-4">
@@ -35,13 +35,13 @@
                         <nav :class="!navbarOpen && 'ud-hidden' " id="navbarCollapse" class="ud-absolute ud-right-4 ud-top-full ud-w-full ud-max-w-[250px] ud-rounded-lg ud-bg-bg-color ud-shadow-lg lg:ud-static lg:ud-block lg:ud-w-full lg:ud-max-w-full lg:ud-bg-transparent ud-py-3 lg:ud-py-0 lg:ud-px-4 lg:ud-shadow-none xl:ud-px-6">
                             <ul class="ud-blcok lg:ud-flex">
                                 <li class="ud-group ud-relative">
-                                    <a href="explore-items.html" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
+                                    <a href="{{ route('events.index') }}" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
                                         Eventos
                                     </a>
                                 </li>
                                 <li class="ud-group ud-relative">
-                                    <a href="https://discord.com/invite/SxNNgXBAQS" target="_blank" rel="nofollow" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
-                                        Comunidades
+                                    <a href="{{ route('brands.index') }}" target="_blank" rel="nofollow" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
+                                        Marcas
                                     </a>
                                 </li>
                                 <li class="ud-group ud-relative">
