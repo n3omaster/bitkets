@@ -35,54 +35,18 @@
                         <nav :class="!navbarOpen && 'ud-hidden' " id="navbarCollapse" class="ud-absolute ud-right-4 ud-top-full ud-w-full ud-max-w-[250px] ud-rounded-lg ud-bg-bg-color ud-shadow-lg lg:ud-static lg:ud-block lg:ud-w-full lg:ud-max-w-full lg:ud-bg-transparent ud-py-3 lg:ud-py-0 lg:ud-px-4 lg:ud-shadow-none xl:ud-px-6">
                             <ul class="ud-blcok lg:ud-flex">
                                 <li class="ud-group ud-relative">
-                                    <a href="{{ route('welcome') }}" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-white group-hover:ud-text-white lg:ud-mr-0 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="ud-group ud-relative">
                                     <a href="explore-items.html" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
-                                        Explore
+                                        Eventos
                                     </a>
                                 </li>
                                 <li class="ud-group ud-relative">
                                     <a href="https://discord.com/invite/SxNNgXBAQS" target="_blank" rel="nofollow" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
-                                        Community
+                                        Comunidades
                                     </a>
-                                </li>
-
-                                <li class="ud-group submenu-item ud-relative">
-                                    <a href="javascript:void(0)" @click="submenuOpen = !submenuOpen" class="ud-relative ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] after:ud-absolute after:ud-right-1 after:ud-top-1/2 after:ud-mt-[-2px] after:ud-h-2 after:ud-w-2 after:ud-translate-y-[-50%] after:ud-rotate-45 after:ud-border-b-2 after:ud-border-r-2 after:ud-border-current group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-pl-0 lg:ud-pr-4 lg:after:ud-right-0 xl:ud-ml-12">
-                                        Pages
-                                    </a>
-                                    <div :class="submenuOpen ? 'ud-block' : 'ud-hidden' " class="submenu ud-relative ud-top-full ud-left-0 ud-w-[250px] ud-rounded-md ud-bg-dark ud-p-4 ud-transition-[top] ud-duration-300 group-hover:ud-opacity-100 lg:ud-invisible lg:ud-absolute lg:ud-top-[110%] lg:ud-block lg:ud-opacity-0 lg:ud-shadow-lg lg:group-hover:ud-visible lg:group-hover:ud-top-full">
-                                        <a href="explore-items.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Explore Items
-                                        </a>
-
-                                        <a href="item-details.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Item Details
-                                        </a>
-                                        <a href="create-item.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Create Item
-                                        </a>
-
-                                        <a href="connect-wallet.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Connect Wallet
-                                        </a>
-                                        <a href="support.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Support
-                                        </a>
-                                        <a href="signin.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Sign In Page
-                                        </a>
-                                        <a href="signup.html" class="ud-block ud-rounded ud-py-[10px] ud-px-4 ud-text-sm ud-font-medium ud-text-[#bababa] hover:ud-text-white">
-                                            Sign Up Page
-                                        </a>
-                                    </div>
                                 </li>
                                 <li class="ud-group ud-relative">
                                     <a href="support.html" class="ud-mx-8 ud-flex ud-py-2 ud-text-base ud-font-semibold ud-text-[#bababa] group-hover:ud-text-white lg:ud-mr-0 lg:ud-ml-8 lg:ud-inline-flex lg:ud-py-6 lg:ud-px-0 xl:ud-ml-12">
-                                        Support
+                                        Soporte
                                     </a>
                                 </li>
                             </ul>
@@ -106,14 +70,6 @@
                                 </form>
                             </div>
                         </div>
-                        <a href="connect-wallet.html" class="ud-flex ud-items-center ud-rounded-md ud-border-2 ud-border-white ud-py-3 ud-px-6 ud-text-base ud-font-semibold ud-text-white ud-transition ud-duration-300 ud-ease-in-out hover:ud-border-primary hover:ud-bg-primary lg:ud-px-4 xl:ud-px-6">
-                            <span class="ud-pr-2">
-                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.125 17.75V18.7083C20.125 19.2167 19.9231 19.7042 19.5636 20.0636C19.2042 20.4231 18.7167 20.625 18.2083 20.625H4.79167C3.72792 20.625 2.875 19.7625 2.875 18.7083V5.29167C2.875 4.78333 3.07693 4.29582 3.43638 3.93638C3.79582 3.57693 4.28334 3.375 4.79167 3.375H18.2083C18.7167 3.375 19.2042 3.57693 19.5636 3.93638C19.9231 4.29582 20.125 4.78333 20.125 5.29167V6.25H11.5C10.4363 6.25 9.58333 7.1125 9.58333 8.16667V15.8333C9.58333 16.3417 9.78527 16.8292 10.1447 17.1886C10.5042 17.5481 10.9917 17.75 11.5 17.75H20.125ZM11.5 15.8333H21.0833V8.16667H11.5V15.8333ZM15.3333 13.4375C14.9521 13.4375 14.5865 13.286 14.3169 13.0165C14.0473 12.7469 13.8958 12.3812 13.8958 12C13.8958 11.6188 14.0473 11.2531 14.3169 10.9835C14.5865 10.714 14.9521 10.5625 15.3333 10.5625C15.7146 10.5625 16.0802 10.714 16.3498 10.9835C16.6194 11.2531 16.7708 11.6188 16.7708 12C16.7708 12.3812 16.6194 12.7469 16.3498 13.0165C16.0802 13.286 15.7146 13.4375 15.3333 13.4375Z" fill="white" />
-                                </svg>
-                            </span>
-                            Wallet Connect
-                        </a>
                     </div>
                 </div>
             </div>
