@@ -61,7 +61,7 @@
                             </button>
                             <div class="ud-invisible ud-absolute ud-top-[110%] ud-right-0 ud-w-[250px] ud-rounded-md ud-bg-dark ud-p-3 ud-opacity-0 ud-transition-all group-hover:ud-visible group-hover:ud-top-full group-hover:ud-opacity-100">
                                 <form class="ud-flex">
-                                    <input type="text" placeholder="Search here..." class="ud-w-full ud-bg-transparent ud-py-2 ud-px-4 ud-text-white ud-outline-none" />
+                                    <input type="text" placeholder="Buscar eventos..." class="ud-w-full ud-bg-transparent ud-py-2 ud-px-4 ud-text-white ud-outline-none" />
                                     <button class="ud-text-white" name="search-button" aria-label="search-button">
                                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.2917 3.25C12.1592 3.25 13.9503 3.99189 15.2709 5.31246C16.5914 6.63303 17.3333 8.4241 17.3333 10.2917C17.3333 12.0358 16.6942 13.6392 15.6433 14.8742L15.9358 15.1667H16.7917L22.2083 20.5833L20.5833 22.2083L15.1667 16.7917V15.9358L14.8742 15.6433C13.6392 16.6942 12.0358 17.3333 10.2917 17.3333C8.4241 17.3333 6.63303 16.5914 5.31246 15.2709C3.99189 13.9503 3.25 12.1592 3.25 10.2917C3.25 8.4241 3.99189 6.63303 5.31246 5.31246C6.63303 3.99189 8.4241 3.25 10.2917 3.25ZM10.2917 5.41667C7.58333 5.41667 5.41667 7.58333 5.41667 10.2917C5.41667 13 7.58333 15.1667 10.2917 15.1667C13 15.1667 15.1667 13 15.1667 10.2917C15.1667 7.58333 13 5.41667 10.2917 5.41667Z" fill="currentColor" />
@@ -86,8 +86,8 @@
                 <div class="ud-w-full ud-px-4 sm:ud-w-6/12 lg:ud-w-3/12 xl:ud-w-4/12">
                     <div class="ud-mb-16">
                         <div class="ud-max-w-[300px]">
-                            <a href="{{ route('welcome') }}" class="ud-mb-7 ud-inline-block">
-                                <img src="images/logo.svg" alt="logo" class="ud-h-10" />
+                            <a href="{{ route('welcome') }}" class="ud-mb-7 ud-inline-block ud-font-bold ud-text-3xl ud-text-white">
+                                BitKets
                             </a>
                             <p class="ud-mb-6 ud-text-base ud-font-medium ud-text-body-color">
                                 Reservas de eventos, fiestas, entradas y todo tipo de tickets para lo que desee lanzar mediante Bitcoin Lightning ⚡️

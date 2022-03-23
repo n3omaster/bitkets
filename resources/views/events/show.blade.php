@@ -5,13 +5,19 @@
             <div class="ud-rounded-lg ud-border-2 ud-border-stroke ud-bg-bg-color ud-py-5 ud-px-8">
                 <ul class="ud-flex ud-items-center">
                     <li class="ud-flex ud-items-center ud-text-base ud-font-medium ud-text-white">
-                        <a href="javascript:void(0)" class="ud-text-white hover:ud-text-primary">
-                            Home
+                        <a href="{{ route('welcome') }}" class="ud-text-white hover:ud-text-primary">
+                            Inicio
                         </a>
                         <span class="ud-px-3"> / </span>
                     </li>
                     <li class="ud-flex ud-items-center ud-text-base ud-font-medium ud-text-white">
-                        Explore Items
+                        <a href="{{ route('events.index') }}" class="ud-text-white hover:ud-text-primary">
+                            Eventos
+                        </a>
+                        <span class="ud-px-3"> / </span>
+                    </li>
+                    <li class="ud-flex ud-items-center ud-text-base ud-font-medium ud-text-white">
+                        {{ $event->name }}
                     </li>
                 </ul>
             </div>
@@ -54,27 +60,30 @@
                                 </div>
                                 <div class="ud-w-full">
                                     <h3 class="ud-text-base ud-font-semibold ud-text-white">
-                                        Participante 1
+                                        {{ $event->owner->name }}
                                         <span class="ud-block ud-text-base ud-font-medium ud-text-body-color">
-                                            Owned by
+                                            Organizador
                                         </span>
                                     </h3>
                                 </div>
                             </div>
 
+                            {{--
                             <div class="ud-flex ud-items-center sm:ud-pl-8">
                                 <div class="ud-mr-2 ud-h-11 ud-w-full ud-max-w-[44px] ud-rounded-md">
                                     <img src="images/picks/creator-01.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
                                 </div>
                                 <div class="ud-w-full">
                                     <h3 class="ud-text-base ud-font-semibold ud-text-white">
-                                        Participante 1
+
                                         <span class="ud-block ud-text-base ud-font-medium ud-text-body-color">
-                                            Create by
+                                            Co-organizador
                                         </span>
                                     </h3>
                                 </div>
                             </div>
+                            --}}
+
                         </div>
 
                         <p class="ud-mb-9 ud-text-base ud-font-medium ud-leading-relaxed ud-text-body-color">
@@ -88,7 +97,7 @@
                                         Lugar: <span class="ud-text-white">{{ $event->place }}</span>
                                     </p>
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Tickets: <span class="ud-text-white"></span>
+                                        Tickets: <span class="ud-text-white"> + 100</span>
                                     </p>
                                     <p class="ud-text-base ud-font-semibold ud-text-body-color">
                                         Fecha:
@@ -103,7 +112,7 @@
                                         <span class="ud-text-white">$ {{ $event->price[0]->price }}</span>
                                     </p>
                                     <p class="ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-white ud-bg-opacity-10 ud-py-[10px] ud-px-8 ud-text-base ud-font-semibold ud-text-white">
-                                        05 : 15 : 07 : 45
+                                        En {{ \Carbon\Carbon::parse($event->end)->diffInDays(\Carbon\Carbon::now()); }} días
                                     </p>
                                 </div>
                             </div>
@@ -113,17 +122,18 @@
                             <div class="ud-flex ud-w-full ud-flex-wrap ud-items-center ud-border-b ud-border-stroke ud-px-1 ud-pb-4 ud-pt-1">
                                 <div class="ud-px-[6px] ud-pt-3">
                                     <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
-                                        History
+                                        Tickets
                                     </button>
                                 </div>
                                 <div class="ud-px-[6px] ud-pt-3">
                                     <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
-                                        Details
+                                        Detalles
                                     </button>
                                 </div>
                             </div>
 
                             <div class="ud-py-2">
+                                @forelse ($buyers as $buyer)
                                 <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                                     <div class="ud-flex ud-items-center">
                                         <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">
@@ -131,10 +141,9 @@
                                         </div>
                                         <div class="ud-w-full">
                                             <h4 class="ud-text-sm ud-font-semibold ud-text-white">
-                                                @Devid_Mill...
-
+                                                {{ $buyer->name }}
                                                 <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                    5 Hours ago
+                                                    {{  }}
                                                 </span>
                                             </h4>
                                         </div>
@@ -149,6 +158,8 @@
                                         </h5>
                                     </div>
                                 </div>
+                                @empty
+                                @endforelse
                                 <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                                     <div class="ud-flex ud-items-center">
                                         <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">

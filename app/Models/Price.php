@@ -17,4 +17,12 @@ class Price extends Model
     {
         return $this->hasMany(Media::class);
     }
+
+    /**
+     * Associated Wallet
+     */
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
+    }
 }
