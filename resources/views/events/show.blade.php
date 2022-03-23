@@ -141,9 +141,8 @@
                                         </div>
                                         <div class="ud-w-full">
                                             <h4 class="ud-text-sm ud-font-semibold ud-text-white">
-                                                {{ $buyer->name }}
+                                                {{ $buyer->owner->name }}
                                                 <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                    {{  }}
                                                 </span>
                                             </h4>
                                         </div>
@@ -160,31 +159,6 @@
                                 </div>
                                 @empty
                                 @endforelse
-                                <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
-                                    <div class="ud-flex ud-items-center">
-                                        <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">
-                                            <img src="images/picks/creator-01.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                        </div>
-                                        <div class="ud-w-full">
-                                            <h4 class="ud-text-sm ud-font-semibold ud-text-white">
-                                                @Devid_Mill...
-
-                                                <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                    5 Hours ago
-                                                </span>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="ud-text-right">
-                                        <h5 class="ud-text-sm ud-font-semibold ud-text-white">
-                                            4.75 ETH
-
-                                            <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                = $12.246
-                                            </span>
-                                        </h5>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 

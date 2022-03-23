@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Event;
 use Illuminate\Http\Request;
+
+use Illuminate\Database\Eloquent\Builder;
 
 class EventController extends Controller
 {
@@ -45,9 +48,11 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        
+        $buyers = Cart::where('status', 'paid')->whereHas('ticket', function (Builder $query) use ($event) {
+            return $query->where('event_id', $event->id);
+        })->with('owner')->take(10)->get();
 
-        return view('events.show', compact('event'));
+        return view('events.show', compact('event', 'buyers'));
     }
 
     /**

@@ -13,13 +13,13 @@ class Cart extends Model
      * User who buys the ticket
      */
     public function owner() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     /**
      * Ticked to Buy
      */
     public function ticket() {
-        return $this->belongsTo(Price::class);
+        return $this->belongsTo(Price::class, 'price_id');
     }
 }
