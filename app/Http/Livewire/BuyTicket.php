@@ -16,6 +16,7 @@ use BaconQrCode\Renderer\RendererStyle\Fill;
 use BaconQrCode\Renderer\Image\SvgImageBackEnd;
 use App\Http\Controllers\Api\LightningController;
 use App\Models\Cart;
+use App\Notifications\TicketPaid;
 use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 
 class BuyTicket extends Component
@@ -76,15 +77,15 @@ class BuyTicket extends Component
         }
 
         // Save this ticket into the cart table
-        Cart::create([
+        $cart_paid = Cart::create([
             'user_id' => $user->id,
             'event_id' => $this->event->id,
             'confirmation' => $this->ticket,
             'status' => 'paid'
         ]);
 
-        // Send email to the buyer with the ticket code
-        $this->send_email($user, $this->ticket);
+        // Notify this user with the ticket code
+        $user->notify(new TicketPaid($cart_paid));
 
         /*
         // get a wallet from LightningController

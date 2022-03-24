@@ -1,0 +1,1 @@
+{{ $cart_paid->status }}

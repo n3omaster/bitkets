@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\EventController;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\WelcomeController;
+use App\Notifications\TicketPaid;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 */
+
+Route::get('/notification', function () {
+    $cart_paid = Cart::find(1);
+    return (new TicketPaid($cart_paid))->toMail($cart_paid->owner);
+});

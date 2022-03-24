@@ -2,23 +2,26 @@
 
 namespace App\Notifications;
 
+use App\Models\Cart;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
-class TicketBuyed extends Notification
+class TicketPaid extends Notification
 {
     use Queueable;
+
+    public Cart $cart_paid;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Cart $cart_paid)
     {
-        //
+        $this->cart_paid = $cart_paid;
     }
 
     /**
@@ -41,21 +44,8 @@ class TicketBuyed extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
-    }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
-    public function toArray($notifiable)
-    {
-        return [
-            //
-        ];
+            ->subject('🎉 ¡Felicidades, ya puede participar en nuestro evento!')
+            ->from('no-reply@bitkets.com', 'BitKets')
+            ->view('emails.ticket', ['cart_paid' => $this->cart_paid]);
     }
 }
