@@ -90,81 +90,8 @@
                             {{ $event->description }}
                         </p>
 
-                        <div class="ud-mb-6 ud-flex ud-flex-wrap ud-items-center ud-justify-between ud-rounded-lg ud-border ud-border-stroke ud-bg-bg-color">
-                            <div class="ud-w-full sm:ud-w-1/2">
-                                <div class="ud-space-y-2 ud-border-stroke ud-p-6 sm:ud-border-r">
-                                    <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Lugar: <span class="ud-text-white">{{ $event->place }}</span>
-                                    </p>
-                                    <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Tickets: <span class="ud-text-white"> + 100</span>
-                                    </p>
-                                    <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Fecha:
-                                        <span class="ud-text-white">{{ $event->start }}</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="ud-w-full sm:ud-w-1/2 sm:ud-text-center">
-                                <div class="ud-space-y-3 ud-p-6">
-                                    <p class="ud-text-base ud-font-semibold ud-text-body-color">
-                                        Tickets:
-                                        <span class="ud-text-white">$ {{ $event->price[0]->price }}</span>
-                                    </p>
-                                    <p class="ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-bg-white ud-bg-opacity-10 ud-py-[10px] ud-px-8 ud-text-base ud-font-semibold ud-text-white">
-                                        En {{ \Carbon\Carbon::parse($event->end)->diffInDays(\Carbon\Carbon::now()); }} días
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        @livewire('buy-ticket', ['event' => $event, 'buyers' => $buyers])
 
-                        <div class="ud-mb-8 ud-overflow-hidden ud-rounded-lg ud-border ud-border-stroke ud-bg-bg-color">
-                            <div class="ud-flex ud-w-full ud-flex-wrap ud-items-center ud-border-b ud-border-stroke ud-px-1 ud-pb-4 ud-pt-1">
-                                <div class="ud-px-[6px] ud-pt-3">
-                                    <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
-                                        Tickets
-                                    </button>
-                                </div>
-                                <div class="ud-px-[6px] ud-pt-3">
-                                    <button class="ud-rounded-md ud-border ud-border-stroke ud-py-2 ud-px-5 ud-text-base ud-font-semibold ud-text-white hover:ud-border-primary hover:ud-bg-primary">
-                                        Detalles
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="ud-py-2">
-                                @forelse ($buyers as $buyer)
-                                <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
-                                    <div class="ud-flex ud-items-center">
-                                        <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">
-                                            <img src="images/picks/creator-01.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
-                                        </div>
-                                        <div class="ud-w-full">
-                                            <h4 class="ud-text-sm ud-font-semibold ud-text-white">
-                                                {{ $buyer->owner->name }}
-                                                <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                </span>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="ud-text-right">
-                                        <h5 class="ud-text-sm ud-font-semibold ud-text-white">
-                                            {{ $buyer->owner->name }}
-
-                                            <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
-                                                $ {{ $buyer->ticket->price }}
-                                            </span>
-                                        </h5>
-                                    </div>
-                                </div>
-                                @empty
-                                @endforelse
-                            </div>
-                        </div>
-
-                        <button class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">
-                            Comprar Tickets
-                        </button>
                     </div>
                 </div>
             </div>

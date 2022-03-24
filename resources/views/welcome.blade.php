@@ -7,7 +7,7 @@
                 <div class="ud-w-full ud-px-4 lg:ud-w-1/2">
                     <div class="ud-mb-12 ud-max-w-[570px] lg:ud-mb-0">
                         <h1 class="ud-mb-4 ud-text-[40px] ud-font-bold ud-leading-tight ud-text-white md:ud-text-[50px] lg:ud-text-[40px] xl:ud-text-[46px] 2xl:ud-text-[50px] sm:text-[46px]">
-                            Tickets a eventos con Bitcoin
+                            Tickets para eventos con Bitcoin
                         </h1>
                         <p class="ud-mb-8 ud-text-lg ud-font-medium ud-leading-relaxed ud-text-body-color md:ud-pr-14">
                             Crea y comercializa las entradas a tu evento con Lightning ⚡️ y expande la asistencia a tu fiesta o encuentro sin límites.

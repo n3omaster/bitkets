@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Event;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
+
 
 class EventController extends Controller
 {
