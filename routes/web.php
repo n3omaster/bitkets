@@ -17,6 +17,11 @@ use App\Notifications\TicketPaid;
 |
 */
 
+Route::get('/notification', function () {
+    $cart_paid = Cart::find(1);
+    return (new TicketPaid($cart_paid))->toMail($cart_paid->owner);
+});
+
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // View Events
@@ -37,8 +42,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 */
-
-Route::get('/notification', function () {
-    $cart_paid = Cart::find(1);
-    return (new TicketPaid($cart_paid))->toMail($cart_paid->owner);
-});

@@ -219,6 +219,7 @@
     </footer>
     <!-- ==== Footer End ==== -->
 
+    @stack('modals')
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -228,11 +229,23 @@
         new WOW().init();
     </script>
 
-    @stack('modals')
 
     @stack('scripts')
 
     @livewireScripts
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF55WYY6YP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RF55WYY6YP');
+    </script>
 
 </body>
 

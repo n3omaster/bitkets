@@ -49,15 +49,15 @@
                     <div class="ud-w-full ud-px-4 md:ud-w-1/2 xl:ud-w-1/3 2xl:ud-w-1/4">
                         <div class="gradient-bg ud-mb-5 ud-rounded-xl ud-p-[2px]">
                             <div class="ud-flex ud-items-center ud-rounded-xl ud-bg-bg-color ud-p-6">
-                                <div class="ud-mr-5 ud-h-[70px] ud-w-full ud-max-w-[70px] ud-overflow-hidden ud-rounded-lg">
-                                    <img src="images/artists/image-01.png" alt="artists" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                                <div class="ud-mr-5 ud-h-[70px] ud-w-full ud-max-w-[70px] ud-overflow-hidden ud-rounded-lg ud-flex ud-items-center ud-justify-center">
+                                    <img src="{{ $brand->brand_logo }}" alt="{{ $brand->name }}" class="du-content-center ud-w-full ud-object-cover" />
                                 </div>
                                 <div class="ud-w-full">
                                     <h3 class="ud-truncate ud-text-lg ud-font-semibold ud-text-white">
-                                        @Devid_Miller
+                                        {{ $brand->name }}
                                     </h3>
-                                    <span class="ud-text-base ud-font-semibold ud-text-secondary">
-                                        14.55 ETH
+                                    <span class="ud-text-base ud-font-semibold">
+                                        ⭐️⭐️⭐️⭐️⭐️
                                     </span>
                                 </div>
                             </div>
