@@ -31,7 +31,7 @@
             <div class="ud--mx-4 ud-flex ud-flex-wrap">
                 <div class="ud-w-full ud-px-4 lg:ud-w-1/2">
                     <div class="ud-mb-12 ud-flex ud-w-full ud-items-center ud-justify-center ud-rounded-xl ud-border ud-border-stroke ud-bg-bg-color">
-                        <img class="ud-rounded-xl" src="{{ Storage::disk(config('filesystems.disk'))->url($event->media[0]->image) }}" alt="{{ $event->media[0]->name }}" />
+                        <img class="ud-rounded-xl" src="{{ $event->main_logo }}" alt="{{ $event->media[0]->name }}" />
                     </div>
                 </div>
 
