@@ -59,16 +59,4 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-
-    /**
-     * Route notifications for the mail channel.
-     *
-     * @param  \Illuminate\Notifications\Notification  $notification
-     * @return array|string
-     */
-    public function routeNotificationForMail($notification)
-    {
-        // Return email address and name...
-        return [$this->email_address => $this->name];
-    }
 }
