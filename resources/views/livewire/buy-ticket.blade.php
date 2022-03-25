@@ -45,7 +45,6 @@
                 </a>
             </div>
         </div>
-        {!! $qr !!}
     </div>
     @else
     <div class="ud-mb-6 ud-flex ud-flex-wrap ud-items-center ud-justify-between ud-rounded-lg ud-border ud-border-stroke ud-bg-bg-color">
