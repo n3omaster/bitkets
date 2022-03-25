@@ -33,6 +33,7 @@ class BuyTicket extends Component
     public $qr = "";
     public $svg = "";
     public $ticket = "";
+    public $price_id = "";
 
     /**
      * Initialize vars
@@ -62,7 +63,7 @@ class BuyTicket extends Component
         $this->completed = true;
 
         // Generate a new and unique Ticket Coupon
-        $this->ticket = Str::upper(Str::random(40));
+        $this->ticket = Str::upper(Str::random(8));
 
         // Search for this user in the database
         $user = User::where('email', $this->email)->first();
@@ -72,14 +73,14 @@ class BuyTicket extends Component
             $user = User::create([
                 'name' => $this->name,
                 'email' => $this->email,
-                'password' => Hash::make(Str::random(40)),
+                'password' => Hash::make(Str::random(8)),
             ]);
         }
 
         // Save this ticket into the cart table
         $cart_paid = Cart::create([
             'user_id' => $user->id,
-            'event_id' => $this->event->id,
+            'price_id' => $this->event->price[0]->id,
             'confirmation' => $this->ticket,
             'status' => 'paid'
         ]);

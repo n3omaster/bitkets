@@ -19,6 +19,7 @@
             </label>
             <input wire:model.defer="promo_code" type="text" name="promo_code" id="promo_code" placeholder="Código de promoción" value="{{ old('promo_code') }}" class="ud-w-full ud-rounded-md ud-border ud-border-stroke ud-bg-[#353444] ud-py-3 ud-px-6 ud-text-base ud-font-medium ud-text-body-color ud-outline-none ud-transition-all focus:ud-bg-[#454457] focus:ud-shadow-input" />
         </div>
+
         <button wire:click="buy" type="submit" class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">Comprar</button>
     </form>
     @elseif ($show_qr == true)
@@ -27,16 +28,16 @@
     </div>
     @elseif($completed == true)
     <div class="ud-flex ud-flex-col">
-        <div class="ud-p-4 md:w-1/2 ud-w-full">
+        <div class="ud-w-full">
             <div class="ud-h-full ud-bg-gray-100 ud-p-8 ud-rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="ud-block ud-w-5 ud-h-5 ud-text-gray-400 ud-mb-4" viewBox="0 0 975.036 975.036">
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                 </svg>
-                <p class="ud-leading-relaxed mb-6">Estamos más que encantados de poder contar con su particiapación en nuestro evento.</p>
-                <p class="ud-leading-relaxed mb-6">Su ticket de participación:</p>
-                <p class="ud-leading-relaxed mb-6">{{ $ticket }}</p>
+                <p class="ud-leading-relaxed ud-mb-6">Estamos más que encantados de poder contar con su participación en nuestro evento.</p>
+                <p class="ud-leading-relaxed ud-mb-6">Su ticket de participación:</p>
+                <h1 class="ud-font-bold ud-text-3xl ud-text-center">{{ $ticket }}</h1>
                 <a class="ud-inline-flex ud-items-center">
-                    <img alt="testimonial" src="https://dummyimage.com/107x107" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <img alt="{{ $event->owner->name }}" src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" class="ud-w-12 ud-flex-shrink-0 ud-object-cover ud-object-center">
                     <span class="ud-flex-grow ud-flex ud-flex-col ud-pl-4">
                         <span class="ud-title-font ud-font-medium ud-text-gray-900">{{ $event->owner->name }}</span>
                         <span class="ud-text-gray-500 ud-text-sm">Organizador</span>
@@ -44,7 +45,6 @@
                 </a>
             </div>
         </div>
-        {!! $qr !!}
     </div>
     @else
     <div class="ud-mb-6 ud-flex ud-flex-wrap ud-items-center ud-justify-between ud-rounded-lg ud-border ud-border-stroke ud-bg-bg-color">
@@ -93,8 +93,8 @@
             @forelse ($buyers as $buyer)
             <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                 <div class="ud-flex ud-items-center">
-                    <div class="ud-mr-2 ud-h-10 ud-w-full ud-max-w-[40px] ud-rounded-md">
-                        <img src="images/picks/creator-01.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                    <div class="ud-mr-2 ud-w-full ud-max-w-[40px] ud-rounded-md ud-items-center ud-justify-center">
+                        <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
                     </div>
                     <div class="ud-w-full">
                         <h4 class="ud-text-sm ud-font-semibold ud-text-white">
@@ -106,6 +106,7 @@
                 </div>
                 <div class="ud-text-right">
                     <h5 class="ud-text-sm ud-font-semibold ud-text-white">
+
                         {{ $buyer->owner->name }}
 
                         <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">

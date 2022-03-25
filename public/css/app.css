@@ -569,6 +569,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 33.333333%;
 }.ud-w-1\/2{
   width: 50%;
+}.ud-w-12{
+  width: 3rem;
 }.ud-max-w-\[44px\]{
   max-width: 44px;
 }.ud-max-w-\[500px\]{
@@ -591,6 +593,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 650px;
 }.ud-max-w-\[46px\]{
   max-width: 46px;
+}.ud-flex-shrink-0{
+  flex-shrink: 0;
 }.ud-flex-grow{
   flex-grow: 1;
 }.ud-translate-y-\[-50\%\]{

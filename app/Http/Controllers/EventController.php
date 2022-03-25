@@ -51,7 +51,7 @@ class EventController extends Controller
     {
         $buyers = Cart::where('status', 'paid')->whereHas('ticket', function (Builder $query) use ($event) {
             return $query->where('event_id', $event->id);
-        })->with('owner')->take(10)->get();
+        })->with('owner')->take(5)->get();
 
         return view('events.show', compact('event', 'buyers'));
     }

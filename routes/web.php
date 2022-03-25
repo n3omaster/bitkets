@@ -26,11 +26,8 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // View Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
-Route::get('/{event}', [EventController::class, 'show'])->name('events.show');
-
 // Show Event
-
-// Buy Tickets
+Route::get('/{event}', [EventController::class, 'show'])->name('events.show');
 
 // View Ticket Status
 
