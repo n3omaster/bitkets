@@ -12,11 +12,13 @@
                         <p class="ud-mb-8 ud-text-lg ud-font-medium ud-leading-relaxed ud-text-body-color md:ud-pr-14">
                             Crea y comercializa las entradas a tu evento con Lightning ⚡️ y expande la asistencia a tu fiesta o encuentro sin límites.
                         </p>
+                        {{--
                         <div class="flex flex-wrap items-center">
                             <a href="{{ route('events.index') }}" class="ud-mr-5 ud-mb-5 ud-inline-flex ud-items-center ud-justify-center ud-rounded-md ud-border-2 ud-border-primary ud-bg-primary ud-py-3 ud-px-7 ud-text-base ud-font-semibold ud-text-white ud-transition-all hover:ud-bg-opacity-90">
                                 Ver eventos
                             </a>
                         </div>
+                        --}}
                     </div>
                 </div>
 
@@ -306,6 +308,7 @@
     </section>
     <!-- ==== Features Section End ==== -->
 
+    {{--
     <!-- ==== Collection Section Start ==== -->
     <section class="ud-pt-8 ud-pb-[60px]">
         <div class="ud-container">
@@ -438,6 +441,7 @@
         </div>
     </section>
     <!-- ==== Collection Section End ==== -->
+    --}}
 </x-app-layout>
 
 @push('scripts')
