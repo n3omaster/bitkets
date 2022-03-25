@@ -834,8 +834,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }.ud-text-right{
   text-align: right;
-}.ud-align-middle{
-  vertical-align: middle;
 }.ud-text-base{
   font-size: 1rem;
   line-height: 1.5rem;
