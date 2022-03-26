@@ -19,7 +19,7 @@ class QrController extends Controller
     public function qr($code)
     {
         $img = (new Writer(new ImageRenderer(new RendererStyle(100, 1, null, null, Fill::uniformColor(new Rgb(255, 255, 255), new Rgb(45, 55, 72))), new ImagickImageBackEnd)))
-            ->writeString($code);
+            ->writeString(base64_decode($code));
         return base64_encode($img);
 
         /*
