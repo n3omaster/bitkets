@@ -8,10 +8,17 @@ use App\Models\Media;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
+use Artesaos\SEOTools\Facades\SEOTools;
+
 class WelcomeController extends Controller
 {
     public function index()
     {
+        SEOTools::setTitle('Reserva tickets para eventos usando Bitcoin LN ⚡️');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::twitter()->setSite('@BitKets');
+        SEOTools::jsonLd()->addImage(asset('BitKets.png'));
+
         // Show incoming events
         $events = Event::where('end', '>', Carbon::now())->take(4)->get();
         $today_events = Event::where('end', Carbon::now())->take(4)->get();
