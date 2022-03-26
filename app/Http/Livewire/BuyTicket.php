@@ -36,6 +36,25 @@ class BuyTicket extends Component
     public $price_id = "";
 
     /**
+     * Validation rules for incoming data
+     */
+    protected $rules = [
+        'name' => 'required|min:3',
+        'email' => 'required|email',
+        'promo_code' => 'required',
+    ];
+
+    /**
+     * Custom messages to the validation fails
+     */
+    protected $messages = [
+        'name.required' => 'Escriba su nombre correctamente',
+        'name.min' => 'Debe enviar un nombre válido',
+        'email.required' => 'Debe enviar una dirección de correo',
+        'email.email' => 'Debe enviar una dirección de correo válida',
+    ];
+
+    /**
      * Initialize vars
      */
     public function mount(Event $event, $buyers)
@@ -58,6 +77,9 @@ class BuyTicket extends Component
      */
     public function buy()
     {
+        // Validate submitted data
+        $this->validate();
+
         $this->show_buy_form = false;
         //$this->show_qr = true;
         $this->completed = true;

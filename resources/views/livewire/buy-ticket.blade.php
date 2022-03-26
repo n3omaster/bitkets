@@ -1,23 +1,27 @@
 <div>
     @if ($show_buy_form == true)
     <form wire:submit.prevent="buy">
+
         <div class="ud-mb-5">
             <label for="name" class="ud-mb-2 ud-block ud-text-base ud-font-medium ud-text-white">
                 Nombre
             </label>
             <input wire:model.defer="name" type="text" name="name" id="name" placeholder="Teclee su nombre" value="{{ old('name') }}" class="ud-w-full ud-rounded-md ud-border ud-border-stroke ud-bg-[#353444] ud-py-3 ud-px-6 ud-text-base ud-font-medium ud-text-body-color ud-outline-none ud-transition-all focus:ud-bg-[#454457] focus:ud-shadow-input" />
+            @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div class="ud-mb-5">
             <label for="email" class="ud-mb-2 ud-block ud-text-base ud-font-medium ud-text-white">
                 Correo
             </label>
             <input wire:model.defer="email" type="email" name="email" id="email" placeholder="Teclee su correo" value="{{ old('email') }}" class="ud-w-full ud-rounded-md ud-border ud-border-stroke ud-bg-[#353444] ud-py-3 ud-px-6 ud-text-base ud-font-medium ud-text-body-color ud-outline-none ud-transition-all focus:ud-bg-[#454457] focus:ud-shadow-input" />
+            @error('email') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div class="ud-mb-5">
             <label for="email" class="ud-mb-2 ud-block ud-text-base ud-font-medium ud-text-white">
                 Código de promoción
             </label>
             <input wire:model.defer="promo_code" type="text" name="promo_code" id="promo_code" placeholder="Código de promoción" value="{{ old('promo_code') }}" class="ud-w-full ud-rounded-md ud-border ud-border-stroke ud-bg-[#353444] ud-py-3 ud-px-6 ud-text-base ud-font-medium ud-text-body-color ud-outline-none ud-transition-all focus:ud-bg-[#454457] focus:ud-shadow-input" />
+            @error('promo_code') <span class="error">{{ $message }}</span> @enderror
         </div>
 
         <button wire:click="buy" type="submit" class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">Comprar</button>
@@ -37,7 +41,7 @@
                 <p class="ud-leading-relaxed ud-mb-6">Su ticket de participación:</p>
                 <h1 class="ud-font-bold ud-text-3xl ud-text-center">{{ $ticket }}</h1>
                 <a class="ud-inline-flex ud-items-center">
-                    <img alt="{{ $event->owner->name }}" src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" class="ud-w-12 ud-flex-shrink-0 ud-object-cover ud-object-center">
+                    <img alt="{{ $event->owner->name }}" src="{{ $event->owner->profile_photo_url }}" class="ud-w-12 ud-flex-shrink-0 ud-object-cover ud-object-center">
                     <span class="ud-flex-grow ud-flex ud-flex-col ud-pl-4">
                         <span class="ud-title-font ud-font-medium ud-text-gray-900">{{ $event->owner->name }}</span>
                         <span class="ud-text-gray-500 ud-text-sm">Organizador</span>
@@ -94,7 +98,7 @@
             <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                 <div class="ud-flex ud-items-center">
                     <div class="ud-mr-2 ud-w-full ud-max-w-[40px] ud-rounded-md ud-items-center ud-justify-center">
-                        <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                        <img src="{{ $event->owner->profile_photo_url }}" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center ud-rounded" />
                     </div>
                     <div class="ud-w-full">
                         <h4 class="ud-text-sm ud-font-semibold ud-text-white">
@@ -106,9 +110,7 @@
                 </div>
                 <div class="ud-text-right">
                     <h5 class="ud-text-sm ud-font-semibold ud-text-white">
-
-                        {{ $buyer->owner->name }}
-
+                        {{ $buyer->ticket->event->name }}
                         <span class="ud-block ud-text-sm ud-font-medium ud-text-body-color">
                             $ {{ $buyer->ticket->price }}
                         </span>

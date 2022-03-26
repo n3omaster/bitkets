@@ -25,4 +25,12 @@ class Price extends Model
     {
         return $this->hasOne(Wallet::class);
     }
+
+    /**
+     * Event associated
+     */
+    public function event()
+    {
+        return $this->belongsTo(Event::class, 'event_id');
+    }
 }
