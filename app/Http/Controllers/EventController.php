@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
+use Carbon\Carbon;
+
 use App\Models\Cart;
 use App\Models\Event;
-
 use Illuminate\Http\Request;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Database\Eloquent\Builder;
 
 
@@ -49,6 +52,14 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
+        SEOTools::setTitle('Reserva tickets para' . $event->name . ' con ⚡️');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::twitter()->setSite('@BitKets');
+        SEOTools::jsonLd()->addImage(asset('BitKets.png'));
+        SEOTools::jsonLd()->setType('Event');
+        SEOTools::jsonLd()->addValue('startDate', Carbon::parse($event->start)->format(DateTime::ATOM));
+        SEOTools::jsonLd()->addValue('name', $event->name);
+
         $buyers = Cart::where('status', 'paid')->whereHas('ticket', function (Builder $query) use ($event) {
             return $query->where('event_id', $event->id);
         })->with('owner')->take(5)->latest()->get();
