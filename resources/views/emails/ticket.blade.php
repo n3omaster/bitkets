@@ -533,7 +533,7 @@ a {text-decoration: none;}
                                                         <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-left:2px dashed #cccccc;border-right:2px dashed #cccccc;border-top:2px dashed #cccccc;border-bottom:2px dashed #cccccc;border-radius:5px" role="presentation">
                                                             <tr>
                                                                 <td align="center" style="padding:0;Margin:0;font-size:0px">
-                                                                    {!! @file_get_contents(route('qr', ['code' => base64_encode($cart_paid->confirmation)])) !!}
+                                                                    <img src="data:image/png;base64,{!! @file_get_contents(route('qr', ['code' => base64_encode($cart_paid->confirmation)])) !!}" alt="">
                                                                 </td>
                                                             </tr>
                                                         </table>

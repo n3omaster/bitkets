@@ -1,14 +1,11 @@
 <?php
 
+use BaconQrCode\Writer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\QrController;
 
-use BaconQrCode\Renderer\Color\Rgb;
-use BaconQrCode\Renderer\Image\SvgImageBackEnd;
-use BaconQrCode\Renderer\ImageRenderer;
-use BaconQrCode\Renderer\RendererStyle\Fill;
-use BaconQrCode\Renderer\RendererStyle\RendererStyle;
-use BaconQrCode\Writer;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +19,7 @@ use BaconQrCode\Writer;
 */
 
 // ROute to generate and return the QR based on a text code
-Route::get('/qr/{code}', function (Request $request, $code) {
-    $svg = (new Writer(new ImageRenderer(new RendererStyle(100, 1, null, null, Fill::uniformColor(new Rgb(255, 255, 255), new Rgb(45, 55, 72))), new SvgImageBackEnd)))
-        ->writeString(base64_decode($code));
-
-    return trim(substr($svg, strpos($svg, "\n") + 1));
-})->name('qr');
+Route::get('/qr/{code}', [QrController::class, 'qr'])->name('qr');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
