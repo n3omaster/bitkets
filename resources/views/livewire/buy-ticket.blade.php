@@ -24,7 +24,7 @@
             @error('promo_code') <span class="error">{{ $message }}</span> @enderror
         </div>
 
-        <button wire:click="buy" type="submit" class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">Comprar</button>
+        <button type="submit" class="ud-w-full ud-items-center ud-justify-center ud-rounded-md ud-bg-primary ud-p-[14px] ud-text-base ud-font-semibold ud-text-white hover:ud-bg-opacity-90">Comprar</button>
     </form>
     @elseif ($show_qr == true)
     <div class="ud-flex ud-flex-col">
