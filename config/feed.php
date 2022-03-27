@@ -11,16 +11,16 @@ return [
              * You can also pass an argument to that method. Note that their key must be the name of the parameter:
              * [App\Model::class, 'getAllFeedItems', 'parameterName' => 'argument']
              */
-            'items' => '',
+            'items' => 'App\Models\Event@getAllFeedItems',
 
             /*
              * The feed will be available on this url.
              */
-            'url' => '',
+            'url' => '/feed',
 
-            'title' => 'My feed',
-            'description' => 'The description of the feed.',
-            'language' => 'en-US',
+            'title' => 'Próximos eventos en BitKets',
+            'description' => 'Paga con Bitcoin los tickets a eventos en todo el mundo',
+            'language' => 'es-ES',
 
             /*
              * The image to display for the feed. For Atom feeds, this is displayed as
