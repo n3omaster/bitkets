@@ -19,14 +19,16 @@ use App\Notifications\TicketPaid;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
+// Feeds
 Route::feeds();
+
+// Generate Sitemap
+Route::get('/generate-sitemap', [WelcomeController::class, 'generate_sitemap'])->name('generate_sitemap');
 
 // View Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 // Show Event
 Route::get('/{event}', [EventController::class, 'show'])->name('events.show');
-
-// View Ticket Status
 
 // Brands Index
 Route::get('/brands', [EventController::class, 'index'])->name('brands.index');

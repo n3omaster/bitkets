@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brands;
+use Carbon\Carbon;
 use App\Models\Event;
 use App\Models\Media;
-use Carbon\Carbon;
+use App\Models\Brands;
 use Illuminate\Http\Request;
 
+use Spatie\Sitemap\SitemapGenerator;
 use Artesaos\SEOTools\Facades\SEOTools;
 
 class WelcomeController extends Controller
@@ -29,5 +30,13 @@ class WelcomeController extends Controller
         $brands = Brands::take(4)->inRandomOrder()->get();
 
         return view('welcome', compact('events', 'today_events', 'media1', 'media2', 'brands'));
+    }
+
+    /**
+     * Generate Sitemap in the public root folder
+     */
+    public function generate_sitemap()
+    {
+        SitemapGenerator::create('https://bitkets.com')->writeToFile('sitemap.xml');
     }
 }
