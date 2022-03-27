@@ -17,12 +17,9 @@ use App\Notifications\TicketPaid;
 |
 */
 
-Route::get('/notification', function () {
-    $cart_paid = Cart::find(1);
-    return (new TicketPaid($cart_paid))->toMail($cart_paid->owner);
-});
-
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+
+Route::feeds();
 
 // View Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
