@@ -463,6 +463,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 6px;
 }.ud-top-4{
   top: 1rem;
+}.ud-right-5{
+  right: 1.25rem;
 }.ud-z-10{
   z-index: 10;
 }.ud--z-10{
@@ -611,6 +613,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.ud-transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.ud-appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }.ud-flex-col{
   flex-direction: column;
 }.ud-flex-wrap{
@@ -631,11 +637,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}.ud-space-x-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }.ud-overflow-hidden{
   overflow: hidden;
+}.ud-overflow-x-auto{
+  overflow-x: auto;
 }.ud-truncate{
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}.ud-whitespace-nowrap{
   white-space: nowrap;
 }.ud-rounded-lg{
   border-radius: 0.5rem;
@@ -655,6 +669,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
 }.ud-border-t{
   border-top-width: 1px;
+}.ud-border-t-2{
+  border-top-width: 2px;
 }.ud-border-stroke{
   --tw-border-opacity: 1;
   border-color: rgb(77 76 90 / var(--tw-border-opacity));
@@ -834,6 +850,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 90px;
 }.ud-pb-\[60px\]{
   padding-bottom: 60px;
+}.ud-pb-8{
+  padding-bottom: 2rem;
+}.ud-pr-1{
+  padding-right: 0.25rem;
 }.ud-text-center{
   text-align: center;
 }.ud-text-right{
@@ -1358,6 +1378,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-right-width: 1px;
   }.sm\:ud-p-\[60px\]{
     padding: 60px;
+  }.sm\:ud-px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }.sm\:ud-pr-8{
     padding-right: 2rem;
   }.sm\:ud-pb-0{
@@ -1418,8 +1441,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 25%;
   }.lg\:ud-w-1\/3{
     width: 33.333333%;
+  }.lg\:ud-w-7\/12{
+    width: 58.333333%;
+  }.lg\:ud-w-5\/12{
+    width: 41.666667%;
   }.lg\:ud-max-w-full{
     max-width: 100%;
+  }.lg\:ud-justify-end{
+    justify-content: flex-end;
   }.lg\:ud-bg-transparent{
     background-color: transparent;
   }.lg\:ud-p-5{
@@ -1448,6 +1477,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 0px;
   }.lg\:ud-pr-4{
     padding-right: 1rem;
+  }.lg\:ud-pb-0{
+    padding-bottom: 0px;
   }.lg\:ud-text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;

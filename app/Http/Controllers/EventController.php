@@ -19,8 +19,18 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // Seo elements
+        SEOTools::setTitle('Eventos disponibles para esta semana, entradas con Bitcoin ⚡️');
+        SEOTools::opengraph()->addProperty('type', 'website');
+        SEOTools::twitter()->setSite('@BitKets');
+        SEOTools::jsonLd()->addImage(asset('BitKets.png'));
+
+        // Events listing by latest and more important
+        $events = Event::orderBy('start', 'asc')->paginate(10);
+
+        return view('events.index', compact('events'));
     }
 
     /**
@@ -52,7 +62,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        SEOTools::setTitle('Reserva tickets para' . $event->name . ' con ⚡️');
+        SEOTools::setTitle('Reserva tickets para ' . $event->name . ' con ⚡️');
         SEOTools::opengraph()->addProperty('type', 'website');
         SEOTools::twitter()->setSite('@BitKets');
         SEOTools::jsonLd()->addImage(asset('BitKets.png'));

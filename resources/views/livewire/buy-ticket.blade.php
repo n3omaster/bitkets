@@ -62,7 +62,7 @@
                 </p>
                 <p class="ud-text-base ud-font-semibold ud-text-body-color">
                     Fecha:
-                    <span class="ud-text-white">{{ $event->start }}</span>
+                    <span class="ud-text-white">{{ \Carbon\Carbon::parse($event->start)->format('d/m h:i a') }}</span>
                 </p>
             </div>
         </div>
@@ -98,7 +98,7 @@
             <div class="ud-flex ud-justify-between ud-py-[10px] ud-px-4 ud-transition hover:ud-bg-stroke">
                 <div class="ud-flex ud-items-center">
                     <div class="ud-mr-2 ud-w-full ud-max-w-[40px] ud-rounded-md ud-items-center ud-justify-center">
-                        <img src="{{ $event->owner->profile_photo_url }}" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center ud-rounded" />
+                        <img src="{{ $buyer->owner->profile_photo_url }}" alt="{{ $buyer->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center ud-rounded" />
                     </div>
                     <div class="ud-w-full">
                         <h4 class="ud-text-sm ud-font-semibold ud-text-white">
