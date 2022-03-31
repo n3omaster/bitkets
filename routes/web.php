@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\Cart;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\WelcomeController;
-use App\Notifications\TicketPaid;
+use App\Http\Controllers\Admin\TicketsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +24,9 @@ Route::feeds();
 
 // Generate Sitemap
 Route::get('/generate-sitemap', [WelcomeController::class, 'generate_sitemap'])->name('generate_sitemap');
+
+// Admin Routes
+Route::get('/admin/export_userbase', [TicketsController::class, 'export_userbase'])->name('export_userbase');
 
 // View Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
