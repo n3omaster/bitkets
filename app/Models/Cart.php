@@ -20,7 +20,10 @@ class Cart extends Model
      * User who buys the ticket
      */
     public function owner() {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id')->withDefault([
+            'name' => 'BitKets',
+            'email' => 'no-reply@bitkets.com'
+        ]);
     }
 
     /**
