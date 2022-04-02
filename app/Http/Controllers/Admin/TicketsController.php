@@ -18,9 +18,9 @@ class TicketsController extends Controller
     {
         $this->middleware('auth');
 
-        //if(Auth::user()->id !== 1) {
-        //    abort(403, 'Unauthorized action.');
-        //}
+        if(Auth::user()->id !== 1) {
+            abort(403, 'Unauthorized action.');
+        }
     }
 
     /**

@@ -10,9 +10,16 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
     @stack('styles')
-    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Feeds -->
     @include('feed::links')
 
@@ -26,8 +33,8 @@
         <div class="ud-container">
             <div class="ud-relative ud-mx-[-16px] ud-flex ud-items-center ud-justify-between">
                 <div class="ud-w-60 ud-max-w-full ud-px-4">
-                    <a href="{{ route('welcome') }}" class="header-logo ud-block ud-w-full ud-font-bold ud-text-3xl ud-text-white" :class="scrolledFromTop ? 'ud-py-4 lg:ud-py-2' : 'ud-py-5 lg:ud-py-7' ">
-                        BitKets
+                    <a href="{{ route('welcome') }}" class="header-logo ud-block ud-w-full" :class="scrolledFromTop ? 'ud-py-4 lg:ud-py-2' : 'ud-py-5 lg:ud-py-7' ">
+                        <img src="{{ asset('bitkets-logo.svg') }}" alt="BitKets">
                     </a>
                 </div>
                 <div class="ud-flex ud-w-full ud-items-center ud-justify-between ud-px-4">
@@ -91,8 +98,8 @@
                 <div class="ud-w-full ud-px-4 sm:ud-w-6/12 lg:ud-w-3/12 xl:ud-w-4/12">
                     <div class="ud-mb-16">
                         <div class="ud-max-w-[300px]">
-                            <a href="{{ route('welcome') }}" class="ud-mb-7 ud-inline-block ud-font-bold ud-text-3xl ud-text-white">
-                                BitKets
+                            <a href="{{ route('welcome') }}" class="ud-mb-7">
+                                <img src="{{ asset('bitkets-logo.svg') }}" alt="BitKets">
                             </a>
                             <p class="ud-mb-6 ud-text-base ud-font-medium ud-text-body-color">
                                 Reservas de eventos, fiestas, entradas y todo tipo de tickets para lo que desee lanzar mediante Bitcoin Lightning ⚡️
