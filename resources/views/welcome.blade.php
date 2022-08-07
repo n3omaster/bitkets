@@ -137,7 +137,7 @@
                                 <div class="ud-w-full">
                                     <div class="ud-flex ud-items-center">
                                         <div class="ud-mr-2 ud-h-8 ud-w-full ud-max-w-[32px] ud-rounded-md">
-                                            <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                                            <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/bag.png" alt="creator" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
                                         </div>
                                         <div class="ud-w-full">
                                             <h4 class="ud-text-xs ud-font-semibold ud-text-white">

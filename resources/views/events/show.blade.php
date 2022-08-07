@@ -56,7 +56,7 @@
 
                             <div class="ud-flex ud-items-center ud-border-body-color ud-pr-0 ud-pb-3 sm:ud-border-r-2 sm:ud-pr-8 sm:ud-pb-0">
                                 <div class="ud-mr-2 ud-w-full ud-max-w-[44px] ud-rounded-md ud-items-center ud-justify-center">
-                                    <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                                    <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/bag.png" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
                                 </div>
                                 <div class="ud-w-full">
                                     <h3 class="ud-text-base ud-font-semibold ud-text-white">
@@ -71,7 +71,7 @@
                             {{--
                             <div class="ud-flex ud-items-center sm:ud-pl-8">
                                 <div class="ud-mr-2 ud-w-full ud-max-w-[44px] ud-rounded-md ud-items-center ud-justify-center">
-                                    <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/vistar.png" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
+                                    <img src="https://bitkets.nyc3.digitaloceanspaces.com/brands/bag.png" alt="{{ $event->owner->name }}" class="ud-h-full ud-w-full ud-object-cover ud-object-center" />
                                 </div>
                                 <div class="ud-w-full">
                                     <h3 class="ud-text-base ud-font-semibold ud-text-white">
